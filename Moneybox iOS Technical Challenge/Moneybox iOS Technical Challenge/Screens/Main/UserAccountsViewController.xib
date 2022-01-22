@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserAccountsViewController" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
+            <connections>
+                <outlet property="displayNameLabel" destination="cdL-o3-gis" id="3gb-f7-Z1C"/>
+                <outlet property="tableView" destination="Wbu-Fb-qBx" id="PvJ-pn-gRa"/>
+                <outlet property="totalPlanValueLabel" destination="l1V-Hp-1vn" id="als-sy-3VW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="yIT-4Z-HNY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OL9-l0-Ipx">
+                    <rect key="frame" x="16" y="60" width="382" height="89.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdL-o3-gis">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Plan Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-Hp-1vn">
+                            <rect key="frame" x="0.0" y="45" width="382" height="44.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wbu-Fb-qBx">
+                    <rect key="frame" x="0.0" y="149.5" width="414" height="746.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OL9-l0-Ipx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="3gz-je-XmG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OL9-l0-Ipx" secondAttribute="trailing" constant="16" id="7xu-GU-1NS"/>
+                <constraint firstItem="OL9-l0-Ipx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="Dvd-me-Jhv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wbu-Fb-qBx" secondAttribute="trailing" id="JOp-nR-cnJ"/>
+                <constraint firstItem="Wbu-Fb-qBx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UEz-nK-eoc"/>
+                <constraint firstItem="Wbu-Fb-qBx" firstAttribute="top" secondItem="OL9-l0-Ipx" secondAttribute="bottom" id="hqs-6l-d3V"/>
+                <constraint firstItem="OL9-l0-Ipx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="pBK-Km-BsC"/>
+                <constraint firstAttribute="bottom" secondItem="Wbu-Fb-qBx" secondAttribute="bottom" id="s6O-0l-1eF"/>
+            </constraints>
+            <point key="canvasLocation" x="-236.23188405797103" y="51.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

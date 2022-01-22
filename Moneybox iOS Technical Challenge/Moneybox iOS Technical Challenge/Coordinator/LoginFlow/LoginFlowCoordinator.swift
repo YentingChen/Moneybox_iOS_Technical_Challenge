@@ -39,8 +39,8 @@ class LoginFlowCoordinator: Coordinator {
     
     func finish() {
         
+        finishDelegate?.coordinatorDidFinish(childCoordinator: self)
     }
-    
     
 }
 

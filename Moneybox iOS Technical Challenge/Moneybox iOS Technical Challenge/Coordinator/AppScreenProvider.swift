@@ -17,7 +17,7 @@ class AppScreensProvider: AppScreensProviderProtocol {
     //MARK: - Login Flow
     func loginNavigationController(navigator: LoginNavigator) -> UINavigationController {
         
-        let vm = LoginViewModel()
+        let vm = LoginViewModel(navigator: navigator)
         let vc = LoginViewController(viewModel: vm)
         vc.title = "Login"
         let loginNavigationController = UINavigationController(rootViewController: vc)
@@ -27,7 +27,13 @@ class AppScreensProvider: AppScreensProviderProtocol {
     
     //MARK: - Main Flow
     func accountNavigationController(navigator: MainNavigator) -> UINavigationController {
-        return UINavigationController()
+        
+        let vm = UserAccountsViewModel(navigator: navigator)
+        let vc = UserAccountsViewController(viewModel: vm)
+        vc.title = "User Accounts"
+        let mainNavigationController = UINavigationController(rootViewController: vc)
+        
+        return mainNavigationController
     }
     
     func accountDetailsController() -> UIViewController {

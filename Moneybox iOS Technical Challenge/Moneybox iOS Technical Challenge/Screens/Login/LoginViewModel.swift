@@ -11,8 +11,8 @@ import Foundation
 /// LoginViewModel Input value and action
 protocol LoginViewModelInputType {
     
-    var emailInput: Bindable<String?> { get set }
-    var passwordInput: Bindable<String?> { get set }
+    var emailInput: Bindable<String?> { get  }
+    var passwordInput: Bindable<String?> { get }
     
     func loginButtonDidTapped()
 }
@@ -20,7 +20,7 @@ protocol LoginViewModelInputType {
 /// LoginViewModel Output value and action
 protocol LoginViewModelOutputType {
     
-    var buttonIsSendableOutput: Bindable<Bool> { get set }
+    var buttonIsSendableOutput: Bindable<Bool> { get }
     
 }
 
@@ -34,13 +34,19 @@ class LoginViewModel: LoginViewModelType {
     
     var buttonIsSendableOutput: Bindable<Bool> = Bindable(false)
     
-    func loginButtonDidTapped() {
-        
-    }
+    var navigator: LoginNavigator
     
-    init() {
+    init(navigator: LoginNavigator) {
+        
+        self.navigator = navigator
         
         bindInputValue()
+    }
+    
+    func loginButtonDidTapped() {
+        
+        navigator.finishLoginFlow()
+        
     }
     
     private func bindInputValue() {
@@ -57,7 +63,6 @@ class LoginViewModel: LoginViewModelType {
             
         }
     }
-    
     
     /// Check if email and password both contain value, then button is sendable
     private func checkIsSendable() {
