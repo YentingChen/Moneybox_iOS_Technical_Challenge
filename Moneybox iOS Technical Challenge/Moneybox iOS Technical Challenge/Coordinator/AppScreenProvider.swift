@@ -37,7 +37,9 @@ class AppScreensProvider: AppScreensProviderProtocol {
     }
     
     func accountDetailsController() -> UIViewController {
-        return UIViewController()
+        
+        let vc = UserAccountDetailViewController()
+        return vc
     }
     
 }

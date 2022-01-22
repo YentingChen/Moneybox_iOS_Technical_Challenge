@@ -14,6 +14,8 @@
 		9D3745D2279C726A00FE15BC /* UserAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745D1279C726A00FE15BC /* UserAccountsViewController.swift */; };
 		9D3745D4279C728B00FE15BC /* UserAccountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745D3279C728B00FE15BC /* UserAccountsViewController.xib */; };
 		9D3745D6279C7ADB00FE15BC /* UserAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */; };
+		9D3745D9279C7D7100FE15BC /* UserAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */; };
+		9D3745DB279C7D8700FE15BC /* UserAccountDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		9D3745D1279C726A00FE15BC /* UserAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsViewController.swift; sourceTree = "<group>"; };
 		9D3745D3279C728B00FE15BC /* UserAccountsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountsViewController.xib; sourceTree = "<group>"; };
 		9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsViewModel.swift; sourceTree = "<group>"; };
+		9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountDetailViewController.swift; sourceTree = "<group>"; };
+		9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountDetailViewController.xib; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				9D3745D1279C726A00FE15BC /* UserAccountsViewController.swift */,
 				9D3745D3279C728B00FE15BC /* UserAccountsViewController.xib */,
 				9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */,
+				9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */,
+				9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3745DB279C7D8700FE15BC /* UserAccountDetailViewController.xib in Resources */,
 				9D3745CA279C61A400FE15BC /* LoginViewController.xib in Resources */,
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9D3745D4279C728B00FE15BC /* UserAccountsViewController.xib in Resources */,
@@ -308,6 +315,7 @@
 				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
 				9D3745D2279C726A00FE15BC /* UserAccountsViewController.swift in Sources */,
 				9DD4F4C0279C43B100474A0B /* LoginFlowCoordinator.swift in Sources */,
+				9D3745D9279C7D7100FE15BC /* UserAccountDetailViewController.swift in Sources */,
 				9DD4F4C2279C45C800474A0B /* LoginScreensProviderProtocol.swift in Sources */,
 				9DD4F4CC279C511100474A0B /* MainScreensProviderProtocol.swift in Sources */,
 				9DD4F4BE279C42EA00474A0B /* CoordinatorFinishDelegate.swift in Sources */,
