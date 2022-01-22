@@ -23,7 +23,20 @@
 		9DD4F4CC279C511100474A0B /* MainScreensProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4CB279C511100474A0B /* MainScreensProviderProtocol.swift */; };
 		9DD4F4CE279C512400474A0B /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4CD279C512400474A0B /* MainNavigator.swift */; };
 		9DD4F4D1279C519400474A0B /* AppScreenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4D0279C519400474A0B /* AppScreenProvider.swift */; };
+		9DD4F4D9279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4D8279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift */; };
+		9DD4F4E0279C53E300474A0B /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4DF279C53E300474A0B /* CoordinatorTests.swift */; };
+		9DD4F4E2279C543200474A0B /* AppCoordinatorScreensProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4E1279C543200474A0B /* AppCoordinatorScreensProviderMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DD4F4DA279C539C00474A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD4F49C279C416700474A0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD4F4A3279C416700474A0B;
+			remoteInfo = "Moneybox iOS Technical Challenge";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +57,21 @@
 		9DD4F4CB279C511100474A0B /* MainScreensProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreensProviderProtocol.swift; sourceTree = "<group>"; };
 		9DD4F4CD279C512400474A0B /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		9DD4F4D0279C519400474A0B /* AppScreenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenProvider.swift; sourceTree = "<group>"; };
+		9DD4F4D6279C539C00474A0B /* Moneybox iOS Technical ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moneybox iOS Technical ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD4F4D8279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moneybox_iOS_Technical_ChallengeTests.swift; sourceTree = "<group>"; };
+		9DD4F4DF279C53E300474A0B /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		9DD4F4E1279C543200474A0B /* AppCoordinatorScreensProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorScreensProviderMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9DD4F4A1279C416700474A0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD4F4D3279C539C00474A0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD4F4A6279C416700474A0B /* Moneybox iOS Technical Challenge */,
+				9DD4F4D7279C539C00474A0B /* Moneybox iOS Technical ChallengeTests */,
 				9DD4F4A5279C416700474A0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */,
+				9DD4F4D6279C539C00474A0B /* Moneybox iOS Technical ChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +147,16 @@
 			path = MainFlow;
 			sourceTree = "<group>";
 		};
+		9DD4F4D7279C539C00474A0B /* Moneybox iOS Technical ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DD4F4DF279C53E300474A0B /* CoordinatorTests.swift */,
+				9DD4F4E1279C543200474A0B /* AppCoordinatorScreensProviderMock.swift */,
+				9DD4F4D8279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift */,
+			);
+			path = "Moneybox iOS Technical ChallengeTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +177,24 @@
 			productReference = 9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9DD4F4D5279C539C00474A0B /* Moneybox iOS Technical ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD4F4DC279C539C00474A0B /* Build configuration list for PBXNativeTarget "Moneybox iOS Technical ChallengeTests" */;
+			buildPhases = (
+				9DD4F4D2279C539C00474A0B /* Sources */,
+				9DD4F4D3279C539C00474A0B /* Frameworks */,
+				9DD4F4D4279C539C00474A0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DD4F4DB279C539C00474A0B /* PBXTargetDependency */,
+			);
+			name = "Moneybox iOS Technical ChallengeTests";
+			productName = "Moneybox iOS Technical ChallengeTests";
+			productReference = 9DD4F4D6279C539C00474A0B /* Moneybox iOS Technical ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +207,10 @@
 				TargetAttributes = {
 					9DD4F4A3279C416700474A0B = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					9DD4F4D5279C539C00474A0B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 9DD4F4A3279C416700474A0B;
 					};
 				};
 			};
@@ -170,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				9DD4F4A3279C416700474A0B /* Moneybox iOS Technical Challenge */,
+				9DD4F4D5279C539C00474A0B /* Moneybox iOS Technical ChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +241,13 @@
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9DD4F4B1279C416900474A0B /* Assets.xcassets in Resources */,
 				9DD4F4AF279C416700474A0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD4F4D4279C539C00474A0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +274,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DD4F4D2279C539C00474A0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD4F4E2279C543200474A0B /* AppCoordinatorScreensProviderMock.swift in Sources */,
+				9DD4F4E0279C53E300474A0B /* CoordinatorTests.swift in Sources */,
+				9DD4F4D9279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DD4F4DB279C539C00474A0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD4F4A3279C416700474A0B /* Moneybox iOS Technical Challenge */;
+			targetProxy = 9DD4F4DA279C539C00474A0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9DD4F4AD279C416700474A0B /* Main.storyboard */ = {
@@ -402,6 +486,52 @@
 			};
 			name = Release;
 		};
+		9DD4F4DD279C539C00474A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNAH767L53;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yenting.Moneybox-iOS-Technical-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox iOS Technical Challenge.app/Moneybox iOS Technical Challenge";
+			};
+			name = Debug;
+		};
+		9DD4F4DE279C539C00474A0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNAH767L53;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yenting.Moneybox-iOS-Technical-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox iOS Technical Challenge.app/Moneybox iOS Technical Challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +549,15 @@
 			buildConfigurations = (
 				9DD4F4B9279C416900474A0B /* Debug */,
 				9DD4F4BA279C416900474A0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD4F4DC279C539C00474A0B /* Build configuration list for PBXNativeTarget "Moneybox iOS Technical ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD4F4DD279C539C00474A0B /* Debug */,
+				9DD4F4DE279C539C00474A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

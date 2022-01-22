@@ -36,6 +36,11 @@ class AppCoordinator: Coordinator {
     
     func showMainFlow() {
         
+        let mainFlowCoordinator = MainFlowCoordinator(window: self.window, screensProvider: screensProvider)
+        
+        mainFlowCoordinator.finishDelegate = self
+        
+        mainFlowCoordinator.start()
         
         
     }

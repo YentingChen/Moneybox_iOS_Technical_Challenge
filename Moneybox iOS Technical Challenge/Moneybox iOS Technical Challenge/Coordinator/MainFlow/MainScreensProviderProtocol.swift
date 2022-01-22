@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Shows the screens in `Main flow`
 protocol MainScreensProviderProtocol: AnyObject {

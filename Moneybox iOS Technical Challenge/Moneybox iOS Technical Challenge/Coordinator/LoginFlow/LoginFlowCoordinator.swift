@@ -31,6 +31,10 @@ class LoginFlowCoordinator: Coordinator {
     
     func start() {
         
+        let navigationController =  screensProvider.loginNavigationController(navigator: self)
+        self.navigationController = navigationController
+        self.window.rootViewController = navigationController
+        
     }
     
     func finish() {
