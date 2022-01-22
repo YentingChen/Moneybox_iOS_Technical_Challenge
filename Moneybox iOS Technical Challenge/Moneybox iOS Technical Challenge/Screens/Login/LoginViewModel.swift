@@ -23,12 +23,15 @@ protocol LoginViewModelOutputType {
     var showLoadingIndicator: Bindable<Bool> { get }
     var buttonIsSendableOutput: Bindable<Bool> { get }
     var hideKeyboard: (() -> Void)? { get }
+    var showAlert: ((_ alert: SingleButtonAlert) -> Void)? { get }
     
 }
 
 protocol LoginViewModelType: LoginViewModelInputType, LoginViewModelOutputType {}
 
 class LoginViewModel: LoginViewModelType {
+    
+    var showAlert: ((_ alert: SingleButtonAlert) -> Void)?
     
     var hideKeyboard: (() -> Void)?
     
@@ -63,9 +66,12 @@ class LoginViewModel: LoginViewModelType {
                 
             } else {
                 
+                let action = AlertAction(buttonTitle: "ok", handler: nil)
+                let alert = SingleButtonAlert(title: "Error", message: "wrong email format!", action: action)
+                
+                showAlert?(alert)
                 
             }
-        
             
         }
         
@@ -84,24 +90,32 @@ class LoginViewModel: LoginViewModelType {
                 
             case .success(let response):
                 
-                self?.navigator.finishLoginFlow()
+                DispatchQueue.main.async {
+                    
+                    self?.navigator.finishLoginFlow()
+                    
+                }
                 
             case .failure(let error):
-                break
+                
+                let action = AlertAction(buttonTitle: "ok", handler: nil)
+                let alert = SingleButtonAlert(title: "Error", message: "wrong email format!", action: action)
+                
+                self?.showAlert?(alert)
             }
         }
         
     }
     
-    private func bindInputValue() {
+    func bindInputValue() {
         
-        emailInput.bind { [unowned self] email in
+        emailInput.bindAndFire { [unowned self] email in
             
             self.checkIsSendable()
             
         }
         
-        passwordInput.bind { [unowned self] email in
+        passwordInput.bindAndFire { [unowned self] email in
             
             self.checkIsSendable()
             

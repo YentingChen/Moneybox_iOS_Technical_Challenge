@@ -7,11 +7,21 @@
 
 import Foundation
 
+protocol InvestorproductTableViewCellViewModelType {
+    
+    var productNameLabelText: String? { get }
+    var planValueLabelText: String? { get }
+    var moneyBoxLabelText: String? { get }
+}
+
+
 protocol UserAccountsOutputType {
     
     var userDisplayName: Bindable<String?> { get }
     
     var totalPlanValue: Bindable<String?> { get }
+    
+    var cellViewModels: Bindable([InvestorproductTableViewCellViewModelType]()) { get }
     
 }
 
@@ -45,6 +55,28 @@ class UserAccountsViewModel: UserAccountsViewModelType {
         
         navigator.showAccountDetail()
         
+    }
+    
+    func getInvestorproducts(token: String) {
+        
+        let request = InvestorproductsRequst(bearerToken: token)
+        networkService.load(request: request) { [weak self] result in
+            switch result {
+                
+            case .success(let response):
+                
+                if let products = response?.productResponses {
+                    
+                    self?.cellViewModels.value = products
+                    
+                    self?.products = products
+                    
+                }
+               
+            case .failure(let error):
+                break
+            }
+        }
     }
 
     

@@ -15,3 +15,4 @@ protocol APIServiceProtocol {
     func makeRequest(from request: RequestDataType) throws -> URLRequest
     func parseResponse(from response: Data) throws -> ResponseDataType
 }
+

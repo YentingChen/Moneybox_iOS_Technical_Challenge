@@ -26,6 +26,9 @@
 		9D3745EC279C8B7900FE15BC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745EB279C8B7900FE15BC /* LoginResponse.swift */; };
 		9D3745EE279C900B00FE15BC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */; };
 		9D3745F0279C902700FE15BC /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */; };
+		9D3745F4279CA5DA00FE15BC /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F3279CA5DA00FE15BC /* AlertAction.swift */; };
+		9D3745F6279CA80900FE15BC /* InvestorproductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */; };
+		9D3745F8279CA84D00FE15BC /* InvestorproductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -77,6 +80,9 @@
 		9D3745EB279C8B7900FE15BC /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
+		9D3745F3279CA5DA00FE15BC /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductsRequest.swift; sourceTree = "<group>"; };
+		9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductsResponse.swift; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 				9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */,
 				9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */,
 				9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */,
+				9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */,
+				9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 				9D3745CF279C720700FE15BC /* Screens */,
 				9D3745CD279C691300FE15BC /* Bindable.swift */,
 				9D3745E2279C848600FE15BC /* Network */,
+				9D3745F3279CA5DA00FE15BC /* AlertAction.swift */,
 			);
 			path = "Moneybox iOS Technical Challenge";
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
 				9D3745EA279C87A100FE15BC /* LoginRequest.swift in Sources */,
 				9D3745D2279C726A00FE15BC /* UserAccountsViewController.swift in Sources */,
+				9D3745F4279CA5DA00FE15BC /* AlertAction.swift in Sources */,
 				9DD4F4C0279C43B100474A0B /* LoginFlowCoordinator.swift in Sources */,
 				9D3745D9279C7D7100FE15BC /* UserAccountDetailViewController.swift in Sources */,
 				9DD4F4C2279C45C800474A0B /* LoginScreensProviderProtocol.swift in Sources */,
@@ -368,6 +378,7 @@
 				9D3745CC279C68DA00FE15BC /* LoginViewModel.swift in Sources */,
 				9DD4F4D1279C519400474A0B /* AppScreenProvider.swift in Sources */,
 				9D3745D6279C7ADB00FE15BC /* UserAccountsViewModel.swift in Sources */,
+				9D3745F8279CA84D00FE15BC /* InvestorproductsResponse.swift in Sources */,
 				9D3745CE279C691300FE15BC /* Bindable.swift in Sources */,
 				9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */,
 				9D3745DF279C843900FE15BC /* APIServiceProtocol.swift in Sources */,
@@ -375,6 +386,7 @@
 				9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */,
 				9DD4F4CE279C512400474A0B /* MainNavigator.swift in Sources */,
 				9D3745E4279C86F400FE15BC /* RequestProtocol.swift in Sources */,
+				9D3745F6279CA80900FE15BC /* InvestorproductsRequest.swift in Sources */,
 				9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */,
 				9D3745DD279C802900FE15BC /* APIRequestLoader.swift in Sources */,
 				9D3745E6279C872E00FE15BC /* APIService.swift in Sources */,

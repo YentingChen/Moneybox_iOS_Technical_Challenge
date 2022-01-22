@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, SingleButtonDialogPresenter {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,9 +29,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
         configureUI()
         
-        bindViewModel()
+        emailTextField.text = "test+ios@moneyboxapp.com"
+        passwordTextField.text = "P455word12"
+        viewModel.emailInput.value = emailTextField.text
+        
+        viewModel.passwordInput.value = passwordTextField.text
         
     }
     
@@ -45,13 +50,23 @@ class LoginViewController: UIViewController {
         
         viewModel.showLoadingIndicator.bindAndFire { [weak self] showIndicator in
             
-            self?.loadingIndicatorView.isHidden = !showIndicator
+            DispatchQueue.main.async {
+                
+                self?.loadingIndicatorView.isHidden = !showIndicator
+            }
+            
         }
         
         viewModel.hideKeyboard = { [weak self] in
             
             self?.emailTextField.resignFirstResponder()
             self?.passwordTextField.resignFirstResponder()
+            
+        }
+        
+        viewModel.showAlert = { [weak self] alert in
+            
+            self?.presentSingleButtonDialog(alert: alert)
             
         }
         
