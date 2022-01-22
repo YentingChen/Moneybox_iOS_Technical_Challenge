@@ -16,7 +16,13 @@ class AppScreensProvider: AppScreensProviderProtocol {
     
     //MARK: - Login Flow
     func loginNavigationController(navigator: LoginNavigator) -> UINavigationController {
-        return UINavigationController()
+        
+        let vm = LoginViewModel()
+        let vc = LoginViewController(viewModel: vm)
+        vc.title = "Login"
+        let loginNavigationController = UINavigationController(rootViewController: vc)
+        
+        return loginNavigationController
     }
     
     //MARK: - Main Flow

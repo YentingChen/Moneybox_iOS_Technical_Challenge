@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745C7279C618E00FE15BC /* LoginViewController.swift */; };
+		9D3745CA279C61A400FE15BC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745C9279C61A400FE15BC /* LoginViewController.xib */; };
+		9D3745CC279C68DA00FE15BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */; };
+		9D3745CE279C691300FE15BC /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745CD279C691300FE15BC /* Bindable.swift */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D3745C7279C618E00FE15BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D3745C9279C61A400FE15BC /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9D3745CD279C691300FE15BC /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D3745CF279C720700FE15BC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745D0279C721700FE15BC /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9D3745D0279C721700FE15BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745C7279C618E00FE15BC /* LoginViewController.swift */,
+				9D3745C9279C61A400FE15BC /* LoginViewController.xib */,
+				9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9DD4F49B279C416700474A0B = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +136,8 @@
 				9DD4F4B2279C416900474A0B /* LaunchScreen.storyboard */,
 				9DD4F4B5279C416900474A0B /* Info.plist */,
 				9DD4F4C7279C4DAD00474A0B /* Coordinator */,
+				9D3745CF279C720700FE15BC /* Screens */,
+				9D3745CD279C691300FE15BC /* Bindable.swift */,
 			);
 			path = "Moneybox iOS Technical Challenge";
 			sourceTree = "<group>";
@@ -238,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3745CA279C61A400FE15BC /* LoginViewController.xib in Resources */,
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9DD4F4B1279C416900474A0B /* Assets.xcassets in Resources */,
 				9DD4F4AF279C416700474A0B /* Main.storyboard in Resources */,
@@ -258,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
 				9DD4F4C0279C43B100474A0B /* LoginFlowCoordinator.swift in Sources */,
 				9DD4F4C2279C45C800474A0B /* LoginScreensProviderProtocol.swift in Sources */,
 				9DD4F4CC279C511100474A0B /* MainScreensProviderProtocol.swift in Sources */,
@@ -265,7 +295,9 @@
 				9DD4F4CA279C4DD500474A0B /* MainFlowCoordinator.swift in Sources */,
 				9DD4F4C4279C46B400474A0B /* LoginNavigator.swift in Sources */,
 				9DD4F4BC279C424400474A0B /* Coordinator.swift in Sources */,
+				9D3745CC279C68DA00FE15BC /* LoginViewModel.swift in Sources */,
 				9DD4F4D1279C519400474A0B /* AppScreenProvider.swift in Sources */,
+				9D3745CE279C691300FE15BC /* Bindable.swift in Sources */,
 				9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */,
 				9DD4F4C6279C4B0700474A0B /* AppCoordinator.swift in Sources */,
 				9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */,
