@@ -29,6 +29,9 @@
 		9D3745F4279CA5DA00FE15BC /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F3279CA5DA00FE15BC /* AlertAction.swift */; };
 		9D3745F6279CA80900FE15BC /* InvestorproductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */; };
 		9D3745F8279CA84D00FE15BC /* InvestorproductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */; };
+		9D374606279CB35900FE15BC /* InvestorproductTableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374605279CB35900FE15BC /* InvestorproductTableViewCellViewModelType.swift */; };
+		9D37460E279CB42700FE15BC /* InvestorproductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37460C279CB42700FE15BC /* InvestorproductTableViewCell.swift */; };
+		9D37460F279CB42700FE15BC /* InvestorproductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D37460D279CB42700FE15BC /* InvestorproductTableViewCell.xib */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -83,6 +86,9 @@
 		9D3745F3279CA5DA00FE15BC /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductsRequest.swift; sourceTree = "<group>"; };
 		9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductsResponse.swift; sourceTree = "<group>"; };
+		9D374605279CB35900FE15BC /* InvestorproductTableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductTableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		9D37460C279CB42700FE15BC /* InvestorproductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorproductTableViewCell.swift; sourceTree = "<group>"; };
+		9D37460D279CB42700FE15BC /* InvestorproductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestorproductTableViewCell.xib; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,8 +136,6 @@
 			children = (
 				9D3745D0279C721700FE15BC /* Login */,
 				9D3745D7279C7CF300FE15BC /* Main */,
-				9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */,
-				9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -139,11 +143,9 @@
 		9D3745D0279C721700FE15BC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9D3745C7279C618E00FE15BC /* LoginViewController.swift */,
-				9D3745C9279C61A400FE15BC /* LoginViewController.xib */,
-				9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */,
-				9D3745E9279C87A100FE15BC /* LoginRequest.swift */,
-				9D3745EB279C8B7900FE15BC /* LoginResponse.swift */,
+				9D374602279CB31F00FE15BC /* Controller */,
+				9D374603279CB32600FE15BC /* ViewModel */,
+				9D374604279CB32D00FE15BC /* Model */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -151,13 +153,8 @@
 		9D3745D7279C7CF300FE15BC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9D3745D1279C726A00FE15BC /* UserAccountsViewController.swift */,
-				9D3745D3279C728B00FE15BC /* UserAccountsViewController.xib */,
-				9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */,
-				9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */,
-				9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */,
-				9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */,
-				9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */,
+				9D3745FA279CB25000FE15BC /* UserAccount */,
+				9D3745F9279CB21300FE15BC /* UserAccountDetail */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -173,6 +170,123 @@
 				9D3745E7279C874100FE15BC /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		9D3745F9279CB21300FE15BC /* UserAccountDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745FC279CB26400FE15BC /* Controller */,
+			);
+			path = UserAccountDetail;
+			sourceTree = "<group>";
+		};
+		9D3745FA279CB25000FE15BC /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745FB279CB25C00FE15BC /* Controller */,
+				9D3745FD279CB26F00FE15BC /* ViewModel */,
+				9D3745FE279CB27B00FE15BC /* Model */,
+				9D374609279CB3AE00FE15BC /* View */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
+		9D3745FB279CB25C00FE15BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745D1279C726A00FE15BC /* UserAccountsViewController.swift */,
+				9D3745D3279C728B00FE15BC /* UserAccountsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D3745FC279CB26400FE15BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */,
+				9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D3745FD279CB26F00FE15BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */,
+				9D374605279CB35900FE15BC /* InvestorproductTableViewCellViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9D3745FE279CB27B00FE15BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745F5279CA80900FE15BC /* InvestorproductsRequest.swift */,
+				9D3745F7279CA84D00FE15BC /* InvestorproductsResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D3745FF279CB2A700FE15BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9D374601279CB2D600FE15BC /* Model */,
+				9D374600279CB2CD00FE15BC /* View */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9D374600279CB2CD00FE15BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */,
+				9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D374601279CB2D600FE15BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745F3279CA5DA00FE15BC /* AlertAction.swift */,
+				9D3745CD279C691300FE15BC /* Bindable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D374602279CB31F00FE15BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745C7279C618E00FE15BC /* LoginViewController.swift */,
+				9D3745C9279C61A400FE15BC /* LoginViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D374603279CB32600FE15BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9D374604279CB32D00FE15BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745E9279C87A100FE15BC /* LoginRequest.swift */,
+				9D3745EB279C8B7900FE15BC /* LoginResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D374609279CB3AE00FE15BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D37460C279CB42700FE15BC /* InvestorproductTableViewCell.swift */,
+				9D37460D279CB42700FE15BC /* InvestorproductTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9DD4F49B279C416700474A0B = {
@@ -205,9 +319,8 @@
 				9DD4F4B5279C416900474A0B /* Info.plist */,
 				9DD4F4C7279C4DAD00474A0B /* Coordinator */,
 				9D3745CF279C720700FE15BC /* Screens */,
-				9D3745CD279C691300FE15BC /* Bindable.swift */,
+				9D3745FF279CB2A700FE15BC /* Utilities */,
 				9D3745E2279C848600FE15BC /* Network */,
-				9D3745F3279CA5DA00FE15BC /* AlertAction.swift */,
 			);
 			path = "Moneybox iOS Technical Challenge";
 			sourceTree = "<group>";
@@ -342,6 +455,7 @@
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9D3745D4279C728B00FE15BC /* UserAccountsViewController.xib in Resources */,
 				9DD4F4B1279C416900474A0B /* Assets.xcassets in Resources */,
+				9D37460F279CB42700FE15BC /* InvestorproductTableViewCell.xib in Resources */,
 				9DD4F4AF279C416700474A0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
+				9D37460E279CB42700FE15BC /* InvestorproductTableViewCell.swift in Sources */,
 				9D3745EA279C87A100FE15BC /* LoginRequest.swift in Sources */,
 				9D3745D2279C726A00FE15BC /* UserAccountsViewController.swift in Sources */,
 				9D3745F4279CA5DA00FE15BC /* AlertAction.swift in Sources */,
@@ -382,6 +497,7 @@
 				9D3745CE279C691300FE15BC /* Bindable.swift in Sources */,
 				9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */,
 				9D3745DF279C843900FE15BC /* APIServiceProtocol.swift in Sources */,
+				9D374606279CB35900FE15BC /* InvestorproductTableViewCellViewModelType.swift in Sources */,
 				9DD4F4C6279C4B0700474A0B /* AppCoordinator.swift in Sources */,
 				9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */,
 				9DD4F4CE279C512400474A0B /* MainNavigator.swift in Sources */,

@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol InvestorproductTableViewCellViewModelType {
-    
-    var productNameLabelText: String? { get }
-    var planValueLabelText: String? { get }
-    var moneyBoxLabelText: String? { get }
-}
-
 
 protocol UserAccountsOutputType {
     
@@ -21,24 +14,32 @@ protocol UserAccountsOutputType {
     
     var totalPlanValue: Bindable<String?> { get }
     
-    var cellViewModels: Bindable([InvestorproductTableViewCellViewModelType]()) { get }
+    var cellViewModels: Bindable<[InvestorproductTableViewCellViewModelType]> { get }
     
 }
 
 protocol UserAccountsInputType {
     
     func didSelectAccount(index: Int)
+    
+    func didTappedLogoutButton()
 }
 
 protocol UserAccountsViewModelType: UserAccountsInputType, UserAccountsOutputType {}
 
 class UserAccountsViewModel: UserAccountsViewModelType {
     
+    var cellViewModels = Bindable<[InvestorproductTableViewCellViewModelType]>([])
+    
+    private var products: [ProductResponse] = []
+    
     var userDisplayName: Bindable<String?> = Bindable(nil)
     
     var totalPlanValue: Bindable<String?> = Bindable(nil)
     
     var navigator: MainNavigator
+    
+    var networkService =  NetworkService<InvestorproductsRequst, InvestorproductsResponse>()
     
     init(navigator: MainNavigator) {
         self.navigator = navigator
@@ -55,6 +56,11 @@ class UserAccountsViewModel: UserAccountsViewModelType {
         
         navigator.showAccountDetail()
         
+    }
+    
+    func didTappedLogoutButton() {
+        
+        navigator.finishMainFlow()
     }
     
     func getInvestorproducts(token: String) {
