@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="ms6-Vb-SnX" id="gVy-tq-LyI"/>
+                <outlet property="loadingIndicatorView" destination="QF9-6h-2l1" id="d56-Ua-grq"/>
                 <outlet property="loginButton" destination="a8n-HJ-ih9" id="n48-he-piT"/>
                 <outlet property="passwordTextField" destination="Jdr-SO-L72" id="GcX-A0-aB0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lhK-ze-5GX"/>
@@ -66,19 +67,27 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Login"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QF9-6h-2l1" customClass="LoadingIndicatorView" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="a8n-HJ-ih9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1uP-UR-tOe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Jw-FF-T6i" secondAttribute="trailing" constant="16" id="9en-Wo-bJ6"/>
+                <constraint firstItem="QF9-6h-2l1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CG9-wr-kuK"/>
                 <constraint firstItem="2Jw-FF-T6i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="Ew6-Us-hWc"/>
+                <constraint firstItem="QF9-6h-2l1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="d3N-DY-Pdy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a8n-HJ-ih9" secondAttribute="trailing" constant="16" id="h0S-Km-9mT"/>
                 <constraint firstItem="2Jw-FF-T6i" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="luU-1g-CR0"/>
                 <constraint firstItem="a8n-HJ-ih9" firstAttribute="top" secondItem="2Jw-FF-T6i" secondAttribute="bottom" constant="64" id="mfy-3A-Drk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QF9-6h-2l1" secondAttribute="trailing" id="qRp-yw-ORK"/>
                 <constraint firstItem="2Jw-FF-T6i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qvh-bK-0Jo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QF9-6h-2l1" secondAttribute="bottom" id="rhK-lB-H1r"/>
             </constraints>
-            <point key="canvasLocation" x="52" y="29"/>
+            <point key="canvasLocation" x="50.724637681159422" y="28.794642857142854"/>
         </view>
     </objects>
     <resources>

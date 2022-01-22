@@ -16,6 +16,16 @@
 		9D3745D6279C7ADB00FE15BC /* UserAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */; };
 		9D3745D9279C7D7100FE15BC /* UserAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */; };
 		9D3745DB279C7D8700FE15BC /* UserAccountDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */; };
+		9D3745DD279C802900FE15BC /* APIRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745DC279C802900FE15BC /* APIRequestLoader.swift */; };
+		9D3745DF279C843900FE15BC /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745DE279C843900FE15BC /* APIServiceProtocol.swift */; };
+		9D3745E1279C845200FE15BC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745E0279C845200FE15BC /* APIError.swift */; };
+		9D3745E4279C86F400FE15BC /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745E3279C86F400FE15BC /* RequestProtocol.swift */; };
+		9D3745E6279C872E00FE15BC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745E5279C872E00FE15BC /* APIService.swift */; };
+		9D3745E8279C874100FE15BC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745E7279C874100FE15BC /* NetworkService.swift */; };
+		9D3745EA279C87A100FE15BC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745E9279C87A100FE15BC /* LoginRequest.swift */; };
+		9D3745EC279C8B7900FE15BC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745EB279C8B7900FE15BC /* LoginResponse.swift */; };
+		9D3745EE279C900B00FE15BC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */; };
+		9D3745F0279C902700FE15BC /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -57,6 +67,16 @@
 		9D3745D5279C7ADB00FE15BC /* UserAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsViewModel.swift; sourceTree = "<group>"; };
 		9D3745D8279C7D7100FE15BC /* UserAccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountDetailViewController.swift; sourceTree = "<group>"; };
 		9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountDetailViewController.xib; sourceTree = "<group>"; };
+		9D3745DC279C802900FE15BC /* APIRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoader.swift; sourceTree = "<group>"; };
+		9D3745DE279C843900FE15BC /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		9D3745E0279C845200FE15BC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9D3745E3279C86F400FE15BC /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		9D3745E5279C872E00FE15BC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9D3745E7279C874100FE15BC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9D3745E9279C87A100FE15BC /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		9D3745EB279C8B7900FE15BC /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +124,8 @@
 			children = (
 				9D3745D0279C721700FE15BC /* Login */,
 				9D3745D7279C7CF300FE15BC /* Main */,
+				9D3745ED279C900B00FE15BC /* LoadingIndicatorView.swift */,
+				9D3745EF279C902700FE15BC /* LoadingIndicatorView.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -114,6 +136,8 @@
 				9D3745C7279C618E00FE15BC /* LoginViewController.swift */,
 				9D3745C9279C61A400FE15BC /* LoginViewController.xib */,
 				9D3745CB279C68DA00FE15BC /* LoginViewModel.swift */,
+				9D3745E9279C87A100FE15BC /* LoginRequest.swift */,
+				9D3745EB279C8B7900FE15BC /* LoginResponse.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -128,6 +152,19 @@
 				9D3745DA279C7D8700FE15BC /* UserAccountDetailViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9D3745E2279C848600FE15BC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9D3745DC279C802900FE15BC /* APIRequestLoader.swift */,
+				9D3745DE279C843900FE15BC /* APIServiceProtocol.swift */,
+				9D3745E0279C845200FE15BC /* APIError.swift */,
+				9D3745E3279C86F400FE15BC /* RequestProtocol.swift */,
+				9D3745E5279C872E00FE15BC /* APIService.swift */,
+				9D3745E7279C874100FE15BC /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9DD4F49B279C416700474A0B = {
@@ -161,6 +198,7 @@
 				9DD4F4C7279C4DAD00474A0B /* Coordinator */,
 				9D3745CF279C720700FE15BC /* Screens */,
 				9D3745CD279C691300FE15BC /* Bindable.swift */,
+				9D3745E2279C848600FE15BC /* Network */,
 			);
 			path = "Moneybox iOS Technical Challenge";
 			sourceTree = "<group>";
@@ -291,6 +329,7 @@
 			files = (
 				9D3745DB279C7D8700FE15BC /* UserAccountDetailViewController.xib in Resources */,
 				9D3745CA279C61A400FE15BC /* LoginViewController.xib in Resources */,
+				9D3745F0279C902700FE15BC /* LoadingIndicatorView.xib in Resources */,
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9D3745D4279C728B00FE15BC /* UserAccountsViewController.xib in Resources */,
 				9DD4F4B1279C416900474A0B /* Assets.xcassets in Resources */,
@@ -313,24 +352,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
+				9D3745EA279C87A100FE15BC /* LoginRequest.swift in Sources */,
 				9D3745D2279C726A00FE15BC /* UserAccountsViewController.swift in Sources */,
 				9DD4F4C0279C43B100474A0B /* LoginFlowCoordinator.swift in Sources */,
 				9D3745D9279C7D7100FE15BC /* UserAccountDetailViewController.swift in Sources */,
 				9DD4F4C2279C45C800474A0B /* LoginScreensProviderProtocol.swift in Sources */,
+				9D3745E8279C874100FE15BC /* NetworkService.swift in Sources */,
 				9DD4F4CC279C511100474A0B /* MainScreensProviderProtocol.swift in Sources */,
 				9DD4F4BE279C42EA00474A0B /* CoordinatorFinishDelegate.swift in Sources */,
 				9DD4F4CA279C4DD500474A0B /* MainFlowCoordinator.swift in Sources */,
 				9DD4F4C4279C46B400474A0B /* LoginNavigator.swift in Sources */,
+				9D3745EE279C900B00FE15BC /* LoadingIndicatorView.swift in Sources */,
+				9D3745EC279C8B7900FE15BC /* LoginResponse.swift in Sources */,
 				9DD4F4BC279C424400474A0B /* Coordinator.swift in Sources */,
 				9D3745CC279C68DA00FE15BC /* LoginViewModel.swift in Sources */,
 				9DD4F4D1279C519400474A0B /* AppScreenProvider.swift in Sources */,
 				9D3745D6279C7ADB00FE15BC /* UserAccountsViewModel.swift in Sources */,
 				9D3745CE279C691300FE15BC /* Bindable.swift in Sources */,
 				9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */,
+				9D3745DF279C843900FE15BC /* APIServiceProtocol.swift in Sources */,
 				9DD4F4C6279C4B0700474A0B /* AppCoordinator.swift in Sources */,
 				9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */,
 				9DD4F4CE279C512400474A0B /* MainNavigator.swift in Sources */,
+				9D3745E4279C86F400FE15BC /* RequestProtocol.swift in Sources */,
 				9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */,
+				9D3745DD279C802900FE15BC /* APIRequestLoader.swift in Sources */,
+				9D3745E6279C872E00FE15BC /* APIService.swift in Sources */,
+				9D3745E1279C845200FE15BC /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,13 +20,19 @@ protocol LoginViewModelInputType {
 /// LoginViewModel Output value and action
 protocol LoginViewModelOutputType {
     
+    var showLoadingIndicator: Bindable<Bool> { get }
     var buttonIsSendableOutput: Bindable<Bool> { get }
+    var hideKeyboard: (() -> Void)? { get }
     
 }
 
 protocol LoginViewModelType: LoginViewModelInputType, LoginViewModelOutputType {}
 
 class LoginViewModel: LoginViewModelType {
+    
+    var hideKeyboard: (() -> Void)?
+    
+    var showLoadingIndicator: Bindable<Bool> = Bindable(false)
     
     var emailInput: Bindable<String?> = Bindable(nil)
     
@@ -35,6 +41,8 @@ class LoginViewModel: LoginViewModelType {
     var buttonIsSendableOutput: Bindable<Bool> = Bindable(false)
     
     var navigator: LoginNavigator
+    
+    let networkService = NetworkService<LoginRequest, LoginResponse>()
     
     init(navigator: LoginNavigator) {
         
@@ -45,7 +53,43 @@ class LoginViewModel: LoginViewModelType {
     
     func loginButtonDidTapped() {
         
-        navigator.finishLoginFlow()
+        hideKeyboard?()
+        
+        if let emailInput = emailInput.value, let passwordInput = self.passwordInput.value {
+            
+            if emailInput.isValidEmail() {
+                
+                postLoginRequest(email: emailInput, password: passwordInput)
+                
+            } else {
+                
+                
+            }
+        
+            
+        }
+        
+    }
+    
+    private func postLoginRequest(email: String, password: String) {
+        
+        let request = LoginRequest(userEmail: email, userPassword: password)
+        
+        self.showLoadingIndicator.value = true
+        networkService.load(request: request) { [weak self] result in
+            
+            self?.showLoadingIndicator.value = false
+            
+            switch result {
+                
+            case .success(let response):
+                
+                self?.navigator.finishLoginFlow()
+                
+            case .failure(let error):
+                break
+            }
+        }
         
     }
     

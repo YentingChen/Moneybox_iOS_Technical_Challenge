@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loadingIndicatorView: LoadingIndicatorView!
     let viewModel: LoginViewModel
     
     init(viewModel: LoginViewModel) {
@@ -41,6 +42,19 @@ class LoginViewController: UIViewController {
             self?.loginButton.isEnabled = isSendable
             
         }
+        
+        viewModel.showLoadingIndicator.bindAndFire { [weak self] showIndicator in
+            
+            self?.loadingIndicatorView.isHidden = !showIndicator
+        }
+        
+        viewModel.hideKeyboard = { [weak self] in
+            
+            self?.emailTextField.resignFirstResponder()
+            self?.passwordTextField.resignFirstResponder()
+            
+        }
+        
     }
     
     private func configureUI() {
