@@ -1,0 +1,25 @@
+//
+//  AuthServiceType.swift
+//  Moneybox iOS Technical Challenge
+//
+//  Created by Yenting Chen on 2022/1/22.
+//
+
+import Foundation
+
+protocol AuthServiceType: AnyObject {
+    var userDisplayName: String? { get set }
+    var bearerToken: String? { get set }
+}
+
+class AuthService: AuthServiceType {
+    
+    var userDisplayName: String?
+    var bearerToken: String?
+    
+    // MARK: - Singleton
+    static let share = AuthService()
+    private init() {
+        
+    }
+}

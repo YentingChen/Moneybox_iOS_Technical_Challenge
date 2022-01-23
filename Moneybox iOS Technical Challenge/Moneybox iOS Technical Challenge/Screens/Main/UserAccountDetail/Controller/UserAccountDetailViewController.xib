@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserAccountDetailViewController" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
             <connections>
+                <outlet property="loadingIndicatorView" destination="O9i-z7-1SM" id="JD7-Gi-TXS"/>
+                <outlet property="moneyAddedButton" destination="YiL-BA-Epi" id="xFg-7B-RUG"/>
+                <outlet property="moneyboxLabel" destination="JbN-ce-3D2" id="O9c-ua-Y23"/>
+                <outlet property="planValueLabel" destination="CTp-q6-cGr" id="RHY-qv-Kga"/>
+                <outlet property="productNameLabel" destination="Znz-3z-x1C" id="ifv-wJ-lR1"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uE3-xd-agP"/>
             </connections>
         </placeholder>
@@ -50,15 +55,23 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Add  £10"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9i-z7-1SM" customClass="LoadingIndicatorView" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="O9i-z7-1SM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1YJ-QH-coM"/>
                 <constraint firstItem="27n-3c-JH3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="5jJ-Lc-YuR"/>
                 <constraint firstItem="YiL-BA-Epi" firstAttribute="top" secondItem="27n-3c-JH3" secondAttribute="bottom" constant="100" id="DTV-Wd-dpH"/>
                 <constraint firstItem="YiL-BA-Epi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Dbi-Qq-QiD"/>
                 <constraint firstItem="27n-3c-JH3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Icb-kI-SD9"/>
                 <constraint firstItem="27n-3c-JH3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="NbS-Xi-IsI"/>
+                <constraint firstItem="O9i-z7-1SM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aEa-hU-eO2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O9i-z7-1SM" secondAttribute="bottom" id="iCV-A0-ug7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O9i-z7-1SM" secondAttribute="trailing" id="nQG-bz-bZV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="27n-3c-JH3" secondAttribute="trailing" constant="16" id="stI-fu-Cgg"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>

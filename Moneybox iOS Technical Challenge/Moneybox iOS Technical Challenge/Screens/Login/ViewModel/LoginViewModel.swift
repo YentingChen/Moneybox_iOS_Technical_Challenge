@@ -47,9 +47,12 @@ class LoginViewModel: LoginViewModelType {
     
     let networkService = NetworkService<LoginRequest, LoginResponse>()
     
-    init(navigator: LoginNavigator) {
+    let authSevice: AuthServiceType
+    
+    init(navigator: LoginNavigator, authService: AuthServiceType = AuthService.share) {
         
         self.navigator = navigator
+        self.authSevice = authService
         
         bindInputValue()
     }
@@ -77,6 +80,30 @@ class LoginViewModel: LoginViewModelType {
         
     }
     
+    private func storeDatainAuthService(response: LoginResponse) {
+        
+        authSevice.bearerToken = response.session?.bearerToken
+        authSevice.userDisplayName = response.user?.firstName
+        
+    }
+    
+    private func fininishLoginFlow() {
+        
+        DispatchQueue.main.async {
+            
+            self.navigator.finishLoginFlow()
+            
+        }
+    }
+    
+    private func errorAlert(message: String?) {
+        
+        let action = AlertAction(buttonTitle: "ok", handler: nil)
+        let alert = SingleButtonAlert(title: "Error", message: message, action: action)
+        
+        self.showAlert?(alert)
+    }
+    
     private func postLoginRequest(email: String, password: String) {
         
         let request = LoginRequest(userEmail: email, userPassword: password)
@@ -90,18 +117,19 @@ class LoginViewModel: LoginViewModelType {
                 
             case .success(let response):
                 
-                DispatchQueue.main.async {
-                    
-                    self?.navigator.finishLoginFlow()
-                    
+                guard let response = response else {
+                    self?.errorAlert(message: "response is nil!")
+                    return
                 }
+                    
+                self?.storeDatainAuthService(response: response)
+                
+                self?.fininishLoginFlow()
+
                 
             case .failure(let error):
                 
-                let action = AlertAction(buttonTitle: "ok", handler: nil)
-                let alert = SingleButtonAlert(title: "Error", message: "wrong email format!", action: action)
-                
-                self?.showAlert?(alert)
+                self?.errorAlert(message: "")
             }
         }
         

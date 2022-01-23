@@ -26,7 +26,7 @@ struct InvestorproductsResponse: Codable {
 struct ProductResponse: Codable {
     let id: Int?
     let planValue: Double?
-    let moneybox: Int?
+    var moneybox: Double?
     let product: Product?
 
     enum CodingKeys: String, CodingKey {

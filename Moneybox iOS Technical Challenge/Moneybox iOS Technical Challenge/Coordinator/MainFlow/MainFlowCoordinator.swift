@@ -47,10 +47,9 @@ extension MainFlowCoordinator: MainNavigator {
         
     }
     
-    func showAccountDetail() {
+    func showAccountDetail(product: ProductResponse) {
         
-        let vc = screensProvider.accountDetailsController()
-        
+        let vc = screensProvider.accountDetailsController(product: product)
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

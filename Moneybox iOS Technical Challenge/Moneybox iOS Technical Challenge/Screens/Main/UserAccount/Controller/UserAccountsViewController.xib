@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserAccountsViewController" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
             <connections>
                 <outlet property="displayNameLabel" destination="cdL-o3-gis" id="3gb-f7-Z1C"/>
+                <outlet property="loadingIndicatorView" destination="BZh-8d-fB3" id="Agh-7U-Gmd"/>
                 <outlet property="tableView" destination="Wbu-Fb-qBx" id="PvJ-pn-gRa"/>
                 <outlet property="totalPlanValueLabel" destination="l1V-Hp-1vn" id="als-sy-3VW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yIT-4Z-HNY"/>
@@ -42,17 +43,25 @@
                     <rect key="frame" x="0.0" y="149.5" width="414" height="746.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZh-8d-fB3" customClass="LoadingIndicatorView" customModule="Moneybox_iOS_Technical_Challenge" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="OL9-l0-Ipx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="3gz-je-XmG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OL9-l0-Ipx" secondAttribute="trailing" constant="16" id="7xu-GU-1NS"/>
+                <constraint firstAttribute="bottom" secondItem="BZh-8d-fB3" secondAttribute="bottom" id="Cag-nb-F6d"/>
                 <constraint firstItem="OL9-l0-Ipx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="Dvd-me-Jhv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wbu-Fb-qBx" secondAttribute="trailing" id="JOp-nR-cnJ"/>
+                <constraint firstItem="BZh-8d-fB3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="K1D-pe-415"/>
+                <constraint firstItem="BZh-8d-fB3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="OQu-LM-3zB"/>
                 <constraint firstItem="Wbu-Fb-qBx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UEz-nK-eoc"/>
                 <constraint firstItem="Wbu-Fb-qBx" firstAttribute="top" secondItem="OL9-l0-Ipx" secondAttribute="bottom" id="hqs-6l-d3V"/>
                 <constraint firstItem="OL9-l0-Ipx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="pBK-Km-BsC"/>
+                <constraint firstItem="BZh-8d-fB3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rzn-ST-NZh"/>
                 <constraint firstAttribute="bottom" secondItem="Wbu-Fb-qBx" secondAttribute="bottom" id="s6O-0l-1eF"/>
             </constraints>
             <point key="canvasLocation" x="-236.23188405797103" y="51.5625"/>

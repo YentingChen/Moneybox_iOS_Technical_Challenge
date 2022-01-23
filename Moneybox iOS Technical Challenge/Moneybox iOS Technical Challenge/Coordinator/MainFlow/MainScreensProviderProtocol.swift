@@ -17,6 +17,6 @@ protocol MainScreensProviderProtocol: AnyObject {
     func accountNavigationController(navigator: MainNavigator) -> UINavigationController
     
     // Creates UIViewController to show the details of the account
-    func accountDetailsController() -> UIViewController
+    func accountDetailsController(product: ProductResponse) -> UIViewController
     
 }

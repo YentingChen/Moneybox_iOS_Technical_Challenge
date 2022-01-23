@@ -36,9 +36,11 @@ class AppScreensProvider: AppScreensProviderProtocol {
         return mainNavigationController
     }
     
-    func accountDetailsController() -> UIViewController {
+    func accountDetailsController(product: ProductResponse) -> UIViewController {
         
-        let vc = UserAccountDetailViewController()
+        let vm = UserAccountDetailViewModel(detail: product)
+        let vc = UserAccountDetailViewController(viewModel: vm)
+        vc.title = "Individual Account"
         return vc
     }
     

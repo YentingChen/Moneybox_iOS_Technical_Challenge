@@ -11,8 +11,8 @@ class UserAccountsViewController: UIViewController {
     
     @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var totalPlanValueLabel: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingIndicatorView: LoadingIndicatorView!
     let viewModel: UserAccountsViewModel
     
     init(viewModel: UserAccountsViewModel) {
@@ -23,6 +23,12 @@ class UserAccountsViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.viewWillAppear()
     }
     
     override func viewDidLoad() {
@@ -50,8 +56,26 @@ class UserAccountsViewController: UIViewController {
             self?.displayNameLabel.text = text
         }
         
-        viewModel.totalPlanValue.bindAndFire { [weak self] text in
-            self?.totalPlanValueLabel.text = text
+        viewModel.totalPlanValueText.bindAndFire { [weak self] text in
+            
+            DispatchQueue.main.async {
+                
+                self?.totalPlanValueLabel.text = text
+            }
+        }
+        
+        viewModel.cellViewModels.bind { [weak self] _ in
+            
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        
+        viewModel.showLoadingIndicator.bindAndFire { [weak self] showIndicator in
+            
+            DispatchQueue.main.async {
+                self?.loadingIndicatorView.isHidden = !showIndicator
+            }
         }
     }
     

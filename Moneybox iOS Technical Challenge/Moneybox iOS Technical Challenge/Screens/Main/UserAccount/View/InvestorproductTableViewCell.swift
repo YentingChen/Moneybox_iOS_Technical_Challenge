@@ -9,6 +9,11 @@ import UIKit
 
 class InvestorproductTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var cornerBackgroundView: UIView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var planValueLabel: UILabel!
+    @IBOutlet weak var moneyBoxLabel: UILabel!
+    
     var viewModel: InvestorproductTableViewCellViewModelType? {
         
         didSet {
@@ -17,11 +22,6 @@ class InvestorproductTableViewCell: UITableViewCell {
             
         }
     }
-    
-    @IBOutlet weak var cornerBackgroundView: UIView!
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var planValueLabel: UILabel!
-    @IBOutlet weak var moneyBoxLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,6 +14,6 @@ protocol MainNavigator: AnyObject {
     func finishMainFlow()
     
     /// Presents the account details screen
-    func showAccountDetail()
+    func showAccountDetail(product: ProductResponse)
 }
 
