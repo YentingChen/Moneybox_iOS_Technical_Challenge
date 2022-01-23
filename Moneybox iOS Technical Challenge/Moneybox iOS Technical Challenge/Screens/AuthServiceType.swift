@@ -10,10 +10,11 @@ import Foundation
 protocol AuthServiceType: AnyObject {
     var userDisplayName: String? { get set }
     var bearerToken: String? { get set }
+    func clearAuthData()
 }
 
 class AuthService: AuthServiceType {
-    
+   
     var userDisplayName: String?
     var bearerToken: String?
     
@@ -22,4 +23,10 @@ class AuthService: AuthServiceType {
     private init() {
         
     }
+    
+    func clearAuthData() {
+        userDisplayName = nil
+        bearerToken = nil
+    }
+    
 }

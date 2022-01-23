@@ -36,6 +36,11 @@
 		9D374613279D405C00FE15BC /* OneoffpaymentsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374612279D405C00FE15BC /* OneoffpaymentsRequest.swift */; };
 		9D374616279D407400FE15BC /* OneoffpaymentsSuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374615279D407400FE15BC /* OneoffpaymentsSuccessResponse.swift */; };
 		9D374618279D40A700FE15BC /* UserAccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374617279D40A700FE15BC /* UserAccountDetailViewModel.swift */; };
+		9D37461E279D96C500FE15BC /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37461D279D96C500FE15BC /* NetworkServiceTests.swift */; };
+		9D374620279D9F2500FE15BC /* MockUserLoginResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = 9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */; };
+		9D374621279D9F3D00FE15BC /* MockUserLoginResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */; };
+		9D374623279DA04600FE15BC /* MockInvestroproductsResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = 9D374622279DA04600FE15BC /* MockInvestroproductsResponse.json */; };
+		9D374625279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = 9D374624279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -97,6 +102,10 @@
 		9D374612279D405C00FE15BC /* OneoffpaymentsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneoffpaymentsRequest.swift; sourceTree = "<group>"; };
 		9D374615279D407400FE15BC /* OneoffpaymentsSuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneoffpaymentsSuccessResponse.swift; sourceTree = "<group>"; };
 		9D374617279D40A700FE15BC /* UserAccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountDetailViewModel.swift; sourceTree = "<group>"; };
+		9D37461D279D96C500FE15BC /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockUserLoginResponse.json; sourceTree = "<group>"; };
+		9D374622279DA04600FE15BC /* MockInvestroproductsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockInvestroproductsResponse.json; sourceTree = "<group>"; };
+		9D374624279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockOneoffpaymentsSuccessResponse.json; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -389,9 +398,13 @@
 		9DD4F4D7279C539C00474A0B /* Moneybox iOS Technical ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				9D37461D279D96C500FE15BC /* NetworkServiceTests.swift */,
 				9DD4F4DF279C53E300474A0B /* CoordinatorTests.swift */,
-				9DD4F4E1279C543200474A0B /* AppCoordinatorScreensProviderMock.swift */,
 				9DD4F4D8279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift */,
+				9DD4F4E1279C543200474A0B /* AppCoordinatorScreensProviderMock.swift */,
+				9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */,
+				9D374622279DA04600FE15BC /* MockInvestroproductsResponse.json */,
+				9D374624279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json */,
 			);
 			path = "Moneybox iOS Technical ChallengeTests";
 			sourceTree = "<group>";
@@ -479,6 +492,7 @@
 			files = (
 				9D3745DB279C7D8700FE15BC /* UserAccountDetailViewController.xib in Resources */,
 				9D3745CA279C61A400FE15BC /* LoginViewController.xib in Resources */,
+				9D374621279D9F3D00FE15BC /* MockUserLoginResponse.json in Resources */,
 				9D3745F0279C902700FE15BC /* LoadingIndicatorView.xib in Resources */,
 				9DD4F4B4279C416900474A0B /* LaunchScreen.storyboard in Resources */,
 				9D3745D4279C728B00FE15BC /* UserAccountsViewController.xib in Resources */,
@@ -547,7 +561,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DD4F4E2279C543200474A0B /* AppCoordinatorScreensProviderMock.swift in Sources */,
+				9D374623279DA04600FE15BC /* MockInvestroproductsResponse.json in Sources */,
 				9DD4F4E0279C53E300474A0B /* CoordinatorTests.swift in Sources */,
+				9D37461E279D96C500FE15BC /* NetworkServiceTests.swift in Sources */,
+				9D374620279D9F2500FE15BC /* MockUserLoginResponse.json in Sources */,
+				9D374625279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json in Sources */,
 				9DD4F4D9279C539C00474A0B /* Moneybox_iOS_Technical_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

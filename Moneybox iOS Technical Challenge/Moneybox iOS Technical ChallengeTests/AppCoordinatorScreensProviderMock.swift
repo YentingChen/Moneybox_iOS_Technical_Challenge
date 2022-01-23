@@ -16,7 +16,7 @@ class AppCoordinatorScreensProviderMock: AppScreensProviderProtocol {
     }
     
     var accountDetailsControllerReturnValue: UIViewController?
-    func accountDetailsController() -> UIViewController {
+    func accountDetailsController(product: ProductResponse) -> UIViewController {
         return accountDetailsControllerReturnValue!
     }
     

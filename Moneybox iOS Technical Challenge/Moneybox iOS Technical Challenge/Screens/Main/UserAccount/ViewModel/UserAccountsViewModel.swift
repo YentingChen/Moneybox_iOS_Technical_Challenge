@@ -83,6 +83,8 @@ class UserAccountsViewModel: UserAccountsViewModelType {
     
     func didTappedLogoutButton() {
         
+        authService.clearAuthData()
+        
         navigator.finishMainFlow()
     }
     
@@ -116,5 +118,4 @@ class UserAccountsViewModel: UserAccountsViewModelType {
         }
     }
 
-    
 }

@@ -40,8 +40,7 @@ class UserAccountsViewController: UIViewController {
     }
     
     private func configureUI() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTappedLogoutButton(sender:)))
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTappedLogoutButton(sender:)))
         ///tableView
         tableView.dataSource = self
         tableView.delegate = self
