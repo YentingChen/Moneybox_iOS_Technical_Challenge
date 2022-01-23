@@ -23,11 +23,10 @@ protocol LoginViewModelOutputType {
     var showLoadingIndicator: Bindable<Bool> { get }
     var buttonIsSendableOutput: Bindable<Bool> { get }
     var hideKeyboard: (() -> Void)? { get }
-    var showAlert: ((_ alert: SingleButtonAlert) -> Void)? { get }
     
 }
 
-protocol LoginViewModelType: LoginViewModelInputType, LoginViewModelOutputType {}
+protocol LoginViewModelType: LoginViewModelInputType, LoginViewModelOutputType, ShowingAlertOutput {}
 
 class LoginViewModel: LoginViewModelType {
     
@@ -69,10 +68,7 @@ class LoginViewModel: LoginViewModelType {
                 
             } else {
                 
-                let action = AlertAction(buttonTitle: "ok", handler: nil)
-                let alert = SingleButtonAlert(title: "Error", message: "wrong email format!", action: action)
-                
-                showAlert?(alert)
+                errorAlert(message: "wrong email format, please enter it again")
                 
             }
             
@@ -96,15 +92,7 @@ class LoginViewModel: LoginViewModelType {
         }
     }
     
-    private func errorAlert(message: String?) {
-        
-        let action = AlertAction(buttonTitle: "ok", handler: nil)
-        let alert = SingleButtonAlert(title: "Error", message: message, action: action)
-        
-        self.showAlert?(alert)
-    }
-    
-    private func postLoginRequest(email: String, password: String) {
+    func postLoginRequest(email: String, password: String) {
         
         let request = LoginRequest(userEmail: email, userPassword: password)
         
@@ -129,13 +117,13 @@ class LoginViewModel: LoginViewModelType {
                 
             case .failure(let error):
                 
-                self?.errorAlert(message: "")
+                self?.apiResponseErrorAlert(error: error)
             }
         }
         
     }
     
-    func bindInputValue() {
+    private func bindInputValue() {
         
         emailInput.bindAndFire { [unowned self] email in
             

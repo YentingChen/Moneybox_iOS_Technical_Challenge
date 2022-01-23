@@ -48,7 +48,19 @@ class APIRequestLoader<T: APIServiceProtocol> {
                         
                     case 400..<500:
                         
-                        completionHandler(.failure(.clientError))
+                        do {
+                            guard let data = data else {
+    
+                                return completionHandler(.failure(.clientError(nil)))
+                            }
+                            
+                            let response = try self?.apiService.parseErrorResponse(from: data)
+                            
+                            completionHandler(.failure(.clientError(response)))
+                            
+                        } catch {
+                            completionHandler(.failure(.clientError(nil)))
+                        }
                         
                     case 500..<600:
                         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserAccountDetailViewController: UIViewController {
+class UserAccountDetailViewController: UIViewController, SingleButtonDialogPresenter {
     
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var planValueLabel: UILabel!
@@ -33,12 +33,6 @@ class UserAccountDetailViewController: UIViewController {
         moneyAddedButton.addTarget(self, action: #selector(moneyAddedButtonTapped(sender:)), for: .touchUpInside)
     }
     
-    @objc func moneyAddedButtonTapped(sender: UIButton) {
-        
-        viewModel.didTappedButton()
-        
-    }
-    
     private func bindViewModel() {
         
         viewModel.productDetail.bindAndFire { [weak self] response in
@@ -58,7 +52,21 @@ class UserAccountDetailViewController: UIViewController {
                 self?.loadingIndicatorView.isHidden = !showIndicator
             }
         }
+        
+        viewModel.showAlert = { [weak self] alert in
+            
+            DispatchQueue.main.async {
+                
+                self?.presentSingleButtonDialog(alert: alert)
+            }
+            
+        }
     
     }
     
+    @objc func moneyAddedButtonTapped(sender: UIButton) {
+        
+        viewModel.didTappedButton()
+        
+    }
 }

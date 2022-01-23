@@ -41,6 +41,9 @@
 		9D374621279D9F3D00FE15BC /* MockUserLoginResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */; };
 		9D374623279DA04600FE15BC /* MockInvestroproductsResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = 9D374622279DA04600FE15BC /* MockInvestroproductsResponse.json */; };
 		9D374625279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = 9D374624279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json */; };
+		9D374627279DA1F300FE15BC /* MoneyboxErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374626279DA1F300FE15BC /* MoneyboxErrorResponse.swift */; };
+		9D374629279DAE2600FE15BC /* ShowingAlertOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D374628279DAE2600FE15BC /* ShowingAlertOutput.swift */; };
+		9D37462B279DAF0800FE15BC /* ShowingLoadingIndicatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37462A279DAF0800FE15BC /* ShowingLoadingIndicatorOutput.swift */; };
 		9DD4F4A8279C416700474A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A7279C416700474A0B /* AppDelegate.swift */; };
 		9DD4F4AA279C416700474A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4A9279C416700474A0B /* SceneDelegate.swift */; };
 		9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4F4AB279C416700474A0B /* ViewController.swift */; };
@@ -106,6 +109,9 @@
 		9D37461F279D9F2500FE15BC /* MockUserLoginResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockUserLoginResponse.json; sourceTree = "<group>"; };
 		9D374622279DA04600FE15BC /* MockInvestroproductsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockInvestroproductsResponse.json; sourceTree = "<group>"; };
 		9D374624279DA05F00FE15BC /* MockOneoffpaymentsSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockOneoffpaymentsSuccessResponse.json; sourceTree = "<group>"; };
+		9D374626279DA1F300FE15BC /* MoneyboxErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyboxErrorResponse.swift; sourceTree = "<group>"; };
+		9D374628279DAE2600FE15BC /* ShowingAlertOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAlertOutput.swift; sourceTree = "<group>"; };
+		9D37462A279DAF0800FE15BC /* ShowingLoadingIndicatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingLoadingIndicatorOutput.swift; sourceTree = "<group>"; };
 		9DD4F4A4279C416700474A0B /* Moneybox iOS Technical Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox iOS Technical Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD4F4A7279C416700474A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD4F4A9279C416700474A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 				9D3745E3279C86F400FE15BC /* RequestProtocol.swift */,
 				9D3745E5279C872E00FE15BC /* APIService.swift */,
 				9D3745E7279C874100FE15BC /* NetworkService.swift */,
+				9D374626279DA1F300FE15BC /* MoneyboxErrorResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,6 +277,8 @@
 			children = (
 				9D3745F3279CA5DA00FE15BC /* AlertAction.swift */,
 				9D3745CD279C691300FE15BC /* Bindable.swift */,
+				9D374628279DAE2600FE15BC /* ShowingAlertOutput.swift */,
+				9D37462A279DAF0800FE15BC /* ShowingLoadingIndicatorOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -517,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3745C8279C618E00FE15BC /* LoginViewController.swift in Sources */,
+				9D37462B279DAF0800FE15BC /* ShowingLoadingIndicatorOutput.swift in Sources */,
 				9D37460E279CB42700FE15BC /* InvestorproductTableViewCell.swift in Sources */,
 				9D3745EA279C87A100FE15BC /* LoginRequest.swift in Sources */,
 				9D374611279CB70200FE15BC /* AuthServiceType.swift in Sources */,
@@ -540,6 +550,8 @@
 				9D3745D6279C7ADB00FE15BC /* UserAccountsViewModel.swift in Sources */,
 				9D3745F8279CA84D00FE15BC /* InvestorproductsResponse.swift in Sources */,
 				9D3745CE279C691300FE15BC /* Bindable.swift in Sources */,
+				9D374629279DAE2600FE15BC /* ShowingAlertOutput.swift in Sources */,
+				9D374627279DA1F300FE15BC /* MoneyboxErrorResponse.swift in Sources */,
 				9DD4F4AC279C416700474A0B /* ViewController.swift in Sources */,
 				9D374616279D407400FE15BC /* OneoffpaymentsSuccessResponse.swift in Sources */,
 				9D3745DF279C843900FE15BC /* APIServiceProtocol.swift in Sources */,

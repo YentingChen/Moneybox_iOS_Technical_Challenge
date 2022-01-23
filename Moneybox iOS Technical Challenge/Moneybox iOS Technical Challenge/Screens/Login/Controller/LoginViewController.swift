@@ -66,7 +66,11 @@ class LoginViewController: UIViewController, SingleButtonDialogPresenter {
         
         viewModel.showAlert = { [weak self] alert in
             
-            self?.presentSingleButtonDialog(alert: alert)
+            DispatchQueue.main.async {
+                
+                self?.presentSingleButtonDialog(alert: alert)
+                
+            }
             
         }
         

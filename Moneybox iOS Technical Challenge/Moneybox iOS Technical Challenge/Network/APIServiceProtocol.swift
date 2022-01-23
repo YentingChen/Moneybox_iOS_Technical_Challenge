@@ -16,3 +16,10 @@ protocol APIServiceProtocol {
     func parseResponse(from response: Data) throws -> ResponseDataType
 }
 
+extension APIServiceProtocol {
+    
+    func parseErrorResponse(from response: Data) throws -> MoneyboxErrorResponse {
+        
+        return try JSONDecoder().decode(MoneyboxErrorResponse.self, from: response)
+    }
+}

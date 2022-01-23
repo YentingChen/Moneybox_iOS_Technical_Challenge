@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserAccountsViewController: UIViewController {
+class UserAccountsViewController: UIViewController, SingleButtonDialogPresenter {
     
     @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var totalPlanValueLabel: UILabel!
@@ -75,6 +75,15 @@ class UserAccountsViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.loadingIndicatorView.isHidden = !showIndicator
             }
+        }
+        
+        viewModel.showAlert = { [weak self] alert in
+            
+            DispatchQueue.main.async {
+                
+                self?.presentSingleButtonDialog(alert: alert)
+            }
+            
         }
     }
     

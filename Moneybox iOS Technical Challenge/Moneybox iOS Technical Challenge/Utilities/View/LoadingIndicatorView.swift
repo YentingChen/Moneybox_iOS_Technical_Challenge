@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class LoadingIndicatorView: UIView {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

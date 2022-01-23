@@ -7,19 +7,35 @@
 
 import Foundation
 
-class UserAccountDetailViewModel {
+protocol UserAccountDetailViewModelInputType {
+
+    func didTappedButton()
+}
+
+protocol UserAccountDetailViewModelOutputType {
     
-    var auth: AuthServiceType
+    var buttonDisplayText: Bindable<String?> { get }
+    var productDetail: Bindable<ProductResponse?> { get }
     
-    var productDetail = Bindable<ProductResponse?>(nil)
+}
+
+protocol UserAccountDetailViewModelType: UserAccountDetailViewModelInputType, UserAccountDetailViewModelOutputType, ShowingAlertOutput, ShowingLoadingIndicatorOutput {}
+
+class UserAccountDetailViewModel: UserAccountDetailViewModelType {
+    
+    var showAlert: ((SingleButtonAlert) -> Void)?
     
     let amountToAdd = Bindable<Int>(10)
     
+    let productDetail = Bindable<ProductResponse?>(nil)
+
     let buttonDisplayText = Bindable<String?>(nil)
     
     let showLoadingIndicator: Bindable<Bool> = Bindable(false)
     
     let networkService = NetworkService<OneoffpaymentsRequest, OneoffpaymentsSuccessResponse>()
+    
+    var auth: AuthServiceType
     
     init(auth: AuthServiceType = AuthService.share, detail: ProductResponse) {
         
@@ -37,7 +53,7 @@ class UserAccountDetailViewModel {
         }
     }
     
-    private func postOneoffpaymentsRequest() {
+    func postOneoffpaymentsRequest() {
         
         guard let token = auth.bearerToken else { return }
         guard let productId = productDetail.value?.id else { return }
@@ -60,7 +76,7 @@ class UserAccountDetailViewModel {
                 
             case .failure(let error):
                 
-                break
+                self?.apiResponseErrorAlert(error: error)
             }
             
         }

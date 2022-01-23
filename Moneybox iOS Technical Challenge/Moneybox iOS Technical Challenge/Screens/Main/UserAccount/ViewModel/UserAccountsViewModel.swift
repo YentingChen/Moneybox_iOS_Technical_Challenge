@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol UserAccountsOutputType {
     
     var userDisplayName: Bindable<String?> { get }
@@ -27,7 +26,7 @@ protocol UserAccountsInputType {
     func didTappedLogoutButton()
 }
 
-protocol UserAccountsViewModelType: UserAccountsInputType, UserAccountsOutputType {}
+protocol UserAccountsViewModelType: UserAccountsInputType, UserAccountsOutputType, ShowingAlertOutput, ShowingLoadingIndicatorOutput {}
 
 class UserAccountsViewModel: UserAccountsViewModelType {
     
@@ -42,6 +41,8 @@ class UserAccountsViewModel: UserAccountsViewModelType {
     var totalPlanValueText: Bindable<String?> = Bindable(nil)
     
     let showLoadingIndicator: Bindable<Bool> = Bindable(false)
+    
+    var showAlert: ((SingleButtonAlert) -> Void)?
     
     var navigator: MainNavigator
     
@@ -113,7 +114,9 @@ class UserAccountsViewModel: UserAccountsViewModelType {
                 }
                
             case .failure(let error):
-                break
+                
+                self?.apiResponseErrorAlert(error: error)
+                
             }
         }
     }
