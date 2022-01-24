@@ -15,7 +15,7 @@ In the Coordinator folder you can see:
 
 -  **Coordinator:** It contains its own child Coordinators, and the flow cycle implementing functions.
 
-- **CoordinatorFinishDelegate**: The parent Coordinator knows when its child is ready to be finished.
+- **CoordinatorFinishDelegate:**: The parent Coordinator knows when its child is ready to be finished.
 
 - **AppScreensProviderProtocol:** It lists all the screens(UIViewController and UINavigationController) in the app.
 
@@ -25,14 +25,14 @@ In the Coordinator folder you can see:
 
 There are screens in each flow, each screen is in the MVVM design pattern.
 
-- **View/ViewController** Display the visual elements, and each viewController contains its viewModel which contains the programming and function implementation. Due to the display being made by storyboard, so the View/Cell files are `.xib` 
+- **View/ViewController:** Display the visual elements, and each viewController contains its viewModel which contains the programming and function implementation. Due to the display being made by storyboard, so the View/Cell files are `.xib` 
 
-- **ViewModel** Receives the input from ViewController, handling all the information and logic, and then sends it back to the ViewController. It also tells to navigator to switch the screen.
+- **ViewModel:** Receives the input from ViewController, handling all the information and logic, and then sends it back to the ViewController. It also tells to navigator to switch the screen.
 
 ## Network
 - **NetworkService:** There is a loader to send the request and receive the response, and it contains the APIService.
 
-- **APIService** To make an URLRequest and parse the response to the type that we want.
+- **APIService:** To make an URLRequest and parse the response to the type that we want.
 
 ## Unit Tests
 - **CoordinatorTests:** Tests for switching screens.
