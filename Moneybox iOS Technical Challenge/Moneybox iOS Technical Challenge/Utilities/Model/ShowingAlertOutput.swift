@@ -18,9 +18,9 @@ protocol ShowingAlertOutput {
 
 extension ShowingAlertOutput {
     
-    func errorAlert(title: String = "Error", message: String?) {
+    func errorAlert(title: String = .error, message: String?) {
         
-        let action = AlertAction(buttonTitle: "ok", handler: nil)
+        let action = AlertAction(buttonTitle: .ok, handler: nil)
         let alert = SingleButtonAlert(title: title, message: message, action: action)
         
         self.showAlert?(alert)

@@ -29,14 +29,8 @@ class LoginViewController: UIViewController, SingleButtonDialogPresenter {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bindViewModel()
         configureUI()
-        
-        emailTextField.text = "test+ios@moneyboxapp.com"
-        passwordTextField.text = "P455word12"
-        viewModel.emailInput.value = emailTextField.text
-        
-        viewModel.passwordInput.value = passwordTextField.text
+        bindViewModel()
         
     }
     

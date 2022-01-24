@@ -34,16 +34,16 @@ extension RequestProtocol {
     }
     
     var host: String {
-        return  "api-test02.moneyboxapp.com"
+        return  MoneyboxConstant.host
     }
     
     var baseHeaders: [String : String] {
         
         return [
-            "AppId" : "8cb2237d0679ca88db6464",
-            "Content-Type" : "application/json",
-            "appVersion" : "7.10.0",
-            "apiVersion": "3.0.0"
+            MoneyboxConstant.appIdKey : MoneyboxConstant.appIdValue,
+            MoneyboxConstant.contentTypeKey : MoneyboxConstant.contentTypeValue,
+            MoneyboxConstant.appVersionKey : MoneyboxConstant.appVersionValue,
+            MoneyboxConstant.apiVersionKey: MoneyboxConstant.apiVersionValue
         ]
     }
     

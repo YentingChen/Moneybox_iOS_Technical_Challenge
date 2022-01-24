@@ -76,7 +76,7 @@ class LoginViewModel: LoginViewModelType {
         
     }
     
-    private func storeDatainAuthService(response: LoginResponse) {
+    private func storeDataInAuthService(response: LoginResponse) {
         
         authSevice.bearerToken = response.session?.bearerToken
         authSevice.userDisplayName = response.user?.firstName
@@ -85,11 +85,8 @@ class LoginViewModel: LoginViewModelType {
     
     private func fininishLoginFlow() {
         
-        DispatchQueue.main.async {
-            
-            self.navigator.finishLoginFlow()
-            
-        }
+        self.navigator.finishLoginFlow()
+        
     }
     
     func postLoginRequest(email: String, password: String) {
@@ -109,10 +106,8 @@ class LoginViewModel: LoginViewModelType {
                     self?.errorAlert(message: "response is nil!")
                     return
                 }
-                    
-                self?.storeDatainAuthService(response: response)
                 
-                self?.fininishLoginFlow()
+                self?.loginSuccess(response)
 
                 
             case .failure(let error):
@@ -123,25 +118,45 @@ class LoginViewModel: LoginViewModelType {
         
     }
     
-    private func bindInputValue() {
+    func loginSuccess(_ response: LoginResponse) {
         
-        emailInput.bindAndFire { [unowned self] email in
+        self.storeDataInAuthService(response: response)
+        
+        if Thread.isMainThread {
             
-            self.checkIsSendable()
+            self.fininishLoginFlow()
+            
+        } else {
+            
+            DispatchQueue.main.async {
+                
+                self.fininishLoginFlow()
+                
+            }
             
         }
         
-        passwordInput.bindAndFire { [unowned self] email in
+    }
+    
+    private func bindInputValue() {
+        
+        emailInput.bindAndFire { [unowned self] _ in
             
-            self.checkIsSendable()
+            self.checkIsSendable(email: emailInput.value, password: passwordInput.value)
+            
+        }
+        
+        passwordInput.bindAndFire { [unowned self] _ in
+            
+            self.checkIsSendable(email: emailInput.value, password: passwordInput.value)
             
         }
     }
     
     /// Check if email and password both contain value, then button is sendable
-    private func checkIsSendable() {
+    func checkIsSendable(email: String?, password: String?) {
         
-        if let email = emailInput.value, let password = passwordInput.value, !password.isEmpty, !email.isEmpty {
+        if let email = email, let password = password, !password.isEmpty, !email.isEmpty {
             
             self.buttonIsSendableOutput.value = true
             

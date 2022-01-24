@@ -13,6 +13,16 @@ protocol AuthServiceType: AnyObject {
     func clearAuthData()
 }
 
+extension AuthServiceType {
+    
+    func clearAuthData() {
+        
+        userDisplayName = nil
+        bearerToken = nil
+        
+    }
+}
+
 class AuthService: AuthServiceType {
    
     var userDisplayName: String?
@@ -24,9 +34,5 @@ class AuthService: AuthServiceType {
         
     }
     
-    func clearAuthData() {
-        userDisplayName = nil
-        bearerToken = nil
-    }
-    
+
 }

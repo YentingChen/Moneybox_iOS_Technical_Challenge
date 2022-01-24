@@ -67,8 +67,7 @@ class UserAccountsViewModel: UserAccountsViewModelType {
         
         totalPlanValue.bindAndFire { [unowned self] value in
             
-            let valueText: String = value == nil ? "--" : value!.description
-            self.totalPlanValueText.value = "Total Plan Value: £\(valueText)"
+            self.totalPlanValueText.value = MoneyboxConstant.totalPlanValueText(value: value)
         }
     }
     
